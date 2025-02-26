@@ -187,6 +187,10 @@ switch(roll) {
 
 // Loops are used to execute a block of code multiple times.
 
+// for(initialization; condition; update) {
+//     // code execute
+// }
+
 for(let i = 0; i < 10; i++) {
     console.log("iteration:", i)
 }
@@ -196,8 +200,83 @@ for(let i = 1; i <= 10; i++) {
     console.log(`${table} * ${i} = ${table * i}`)
 }
 
-let i, x="";
-for (i=0; i < 5; i = i + 2) {
-    x += i;
+// let i, x="";
+// for (i=0; i < 5; i = i + 2) {
+//     x += i;
+//     console.log(i)
+// }
+
+
+//Example2
+
+for(let i = 1; i<= 10; i+=2){
     console.log(i)
 }
+
+for(let i = 1; i<= 5; i++){
+    if(i === 3){
+        continue
+    } 
+    console.log(i)
+}
+
+let fruit = ["apple", "orange", "pineapple", "cucumber"];
+for(let i = 1; i< fruit.length; i++){
+    console.log(fruit[i] )
+}
+
+let car = "abdullah";
+for(let i = 0; i < car.length; i++){
+    console.log(car[i])
+}
+
+//for in......Loop
+//Examples
+
+let userName = {name: "abdullah", age: 13, city: "sango"}
+
+for(key in userName){
+    console.log(key + ":", userName[key])
+}
+
+
+//For of....Loop
+//Examples
+let colours = ["Pink", "yellow", "blue", "green"]
+for (colour of colours){
+    console.log(colour)
+}
+
+//while....Loop
+//Examples
+// while (condition){
+//     //code to execute
+// }
+
+//Examples
+// let I = 1;
+// while(I <= 7){
+//     console.log(I)
+// }
+
+let y = 0;
+while(y < 5){
+    y++;
+
+    if(y === 3){
+        continue;
+    }
+    console.log(y)
+}
+
+let fruits = ["apple", "orange", "pineapple", "cucumber"];
+let i = 0;
+while(i < fruits.length){
+    console.log(fruits[i]);
+    i++;
+}
+//For each
+const students= ["Abdullah", "Mubarak", "Habeeb", "Amusan"]
+students.forEach((student, i) => {
+    console.log(`index $[i]: $[student]`)
+})
