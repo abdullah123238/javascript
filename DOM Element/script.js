@@ -57,7 +57,7 @@ container.innerHTML = `
 container.style.backgroundColor = "green"
 
 
-//ADDING AND REMOVING ELEMENT
+//ADDING AND REMOVING CLASS NAME
 
 h6.classList.add("subheader")
 paragraph.classList.remove("body")
