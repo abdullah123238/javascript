@@ -27,8 +27,7 @@ console.log(students)
 
 
 //************ARRAY METHOD*****************
-
-//1. *****************PUSH*****************
+// 1. *****************PUSH*****************
 //To add a new element to the end of an array
 const pushed = students.push("Bisola", "Lateefah")
 console.log(pushed) //To print new array length
@@ -76,16 +75,17 @@ console.log(wears)
 //6. Slice
 //Slice return new array that contains element from a certain point (excluding element at a position of second parameter input) first parameter is important from where to start from while second parameter is when to end but excluding element at the index position (when not use it slice the rest of element)
 
-const male = ["Daodu", "Gbojitta", "Gbajumo", "Ogundiji", "Afunimawobe"]
+const male = ["Daodu", "Gbotija", "Gbajumo", "Ogundiji", "Afunimawobe"]
 console.log(male)
+
+
+const warriors = male.slice(1, 4);
+console.log(warriors)
 
 const newString = "Adeyemi"
 console.log(newString.length);
 const sliceString = newString.slice(1,4);
 console.log(sliceString)
-
-const warriors = male.slice(1, 4);
-console.log(warriors)
 
 const stakeholders = male.slice(4)
 console.log(stakeholders)
@@ -116,7 +116,7 @@ male.sort()
 console.log(male)
 
 //9. indexOf()
-// It is used to search of find the index of a specied element in a array. It search the array from the beginning to the end and return the first occurence of the specied element if the element is not found it will -1
+// It is used to search find the index of a specied element in a array. It search the array from the beginning to the end and return the first occurence of the specied element if the element is not found it will -1
 
 const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 14, 4, 12, 2]
 console.log(num)
@@ -162,11 +162,11 @@ trans.forEach((trn) => {
 
 console.log(totalValue)
 
-names.forEach((name)=> console.log(`congratulation ${name}, you will be representing the team in the UK next weekend`))
+names.forEach((name) => console.log(`congratulation ${name}, you will be representing the team in the UK next weekend`))
 
 
 //12. Map
-//It allocate memory in all data store and return values.
+//It allocate memory in all data store and return values. Is going to create a clone to the original array and apply funtion to each of them
 
 const investory = [
     {name:"Rice", price: 50000},
@@ -186,4 +186,80 @@ console.log(prices)
 const commodities = investory.map((value) => value.name)
 console.log(commodities)
 
+//Map Method --->- It create a new array and apply function to each element without modifying the origial array.
 
+const arr = [1, 2, 3, 4, 5, 6]
+const multipliedVal = arr.map((el) => el * 2)
+console.log(multipliedVal)
+
+const words = ["hello", "world", "javascript"]
+console.log(words.map((words) => words.toUpperCase()))
+
+const pricesInUsd = [200, 120, 300, 90]
+const exchangeRate = 1490
+console.log(pricesInUsd.map((usd) => usd *exchangeRate))
+
+const users = [
+    {name: "Lateefah", age: 300},
+    {name: "Abdullah", age: 950},
+    {name: "Muiz Banire", age: 1450},
+    {name: "Abdul Kabeer", age: 1950}
+]
+
+const nameOnly = users.map((value) => value.name);
+console.log(nameOnly)
+
+const products = [
+    {name: "Laptop", price: 300},
+    {name: "Desktop", price: 950},
+    {name: "Mouse", price: 1450},
+    {name: "Keyboard",price: 1950}
+]
+
+const productWithId = products.map((product, index) =>(
+    {
+        id: index + 1,
+        ...product
+    }
+))
+
+console.log(productWithId)
+console.log(products)
+
+const idOnly = productWithId.map((extract) => extract.id)
+
+console.log(idOnly)
+
+const arrNumb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const numbMap = arrNumb.map((i) =>  {
+   if(i < 6) {
+    return i
+   }
+})
+
+console.log(numbMap)
+
+//13. Filter
+//It create and array that satify the condition.
+//Filter Method create a new array, it will create a clone array and then filter through it
+const evenNumber = arrNumb.filter((i) => i % 2 === 0)
+console.log(evenNumber)
+
+const below = productWithId.filter((product) => product.price <= 1000)
+console.log(below)
+
+const less = productWithId.filter((product) => product.name.length < 7)
+console.log(less)
+
+let Arr = [100, "Pelumi", false, {}, null, undefined ]
+
+const filtered = Arr.filter((data) => typeof data === "string")
+
+console.log(filtered)
+const totalPrice = 0;
+for (let i = 0; i < products.length; i++) {
+    totalPrice += products[i].price;
+}
+
+console.log(totalPrice)
