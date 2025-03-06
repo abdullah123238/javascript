@@ -256,10 +256,82 @@ let Arr = [100, "Pelumi", false, {}, null, undefined ]
 
 const filtered = Arr.filter((data) => typeof data === "string")
 
-console.log(filtered)
-const totalPrice = 0;
-for (let i = 0; i < products.length; i++) {
-    totalPrice += products[i].price;
-}
+//Filter Example 2
 
-console.log(totalPrice)
+const studentnames = ["Deolu", "Dada", "feranmi", "abdullah", "Seun"]
+
+const upperCaseStudentNames = studentnames.filter((name) => {
+    if (name.charAt(0) === name.charAt(0).toUpperCase()) return name
+}).map((element) => element + "s")
+
+console.log(upperCaseStudentNames)
+
+const userNames = [{name: "Abdullah", age: 15}, {name: "feranmi", age: 10}]
+
+userNames.forEach((userName) => userName.age += 5)
+console.log({userNames})
+
+const newUserNames = userNames.map((name, index) => (
+    {
+        ...name,
+        age: name.age + 5,
+        height: name.age + 10,
+        id: index + 1,
+    }
+));
+
+console.log({newUserNames})
+
+//14. Reduce
+
+//syntax: array.reduce((accumulator, currentValue, currentIndex, array), initialValue)
+
+//APPLICATION OF REDUCE
+//a. Sum of Array element
+//b. Flatten of Array
+//c. Occurrence of an element/item in an array
+//d. Find the maximum value
+//e. Grouping data by a property
+
+//Example 1: sum of array element
+
+const myNumbs = [1, 2, 3, 4, 5]
+const sum = myNumbs.reduce((accumulator, currentVal) => (accumulator + currentVal), 0)
+
+console.log({sum})
+
+//Example 2: Flatten of Array
+
+const nestedArray = [[1,2], [3,4], [4,6]];
+
+const FlattenedArray = nestedArray.reduce((acc, currValue) => (acc.concat(currValue)), [])
+
+console.log({FlattenedArray})
+
+const nestedArray2 = [[1,2], [[3,4],[5,6]], [7,8]]
+
+const FlattenedArray2 = nestedArray2
+.reduce((acc, currValue, currentIndex, array) =>{
+
+
+
+},[])
+
+//Example 3: Occurence of an element/item in an array
+
+const myFruits = ["Grape", "Banana", "Banana", "Orange"]
+
+const count = myFruits.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) +1;
+
+    return acc
+}, {})
+
+console.log(count)
+
+//Example 4: Find the maximum value
+
+const maxExample = [10, 30, 3, 100, 4]
+const max = maxExample.reduce((acc, curr) => curr > acc ? curr : acc, maxExample[0])
+
+console.log(max)
