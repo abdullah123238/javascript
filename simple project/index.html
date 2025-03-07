@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/simple project/style.css">
+</head>
+<body>
+    <div class="body">
+        <h4>Login</h4>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+        <input type="email" placeholder="Type your email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Type your password" id="password" name="password" required minlength="6">
+        <div id="error-message" style="color: red; display: none;"></div>
+        <p class="p2">Forgot password?</p>
+        <button type="submit">Login</button>
+        <p class="p3">Or sign Up Using</p>
+        <div class="links">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+        <p class="p3s">Or sign Up Using</p>
+        <div class="a">
+        <a href="#">Sign Up</a>
+        </div>
+        
+    </form>
+    </div>
+    <script src="/simple project/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

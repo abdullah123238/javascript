@@ -68,7 +68,7 @@ console.log(bodyElements)
 
 //Add Event Listener
 document.querySelector("button"), addEventListener("click", function(){
-    this.document.getElementById("message").textContent = "Button Clicked!"
+    document.getElementById("message").textContent = "Button Clicked!"
 })
 
 //House Event
