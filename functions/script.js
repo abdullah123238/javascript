@@ -161,3 +161,5 @@ function getName(name){
         console.log(`Good Day... ${name}`)
     }greet()
 }getName("Abdullah")
+
+
