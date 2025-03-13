@@ -36,7 +36,7 @@ fetchData((data) => {
 let numbers = [2,4,6,8];
 numbers.map((item) => {
     console.log(item*2)
-});
+}); 
 //Write a function greetUser that takes a user's name and a callback function. The function should log a greeting message and then execute the callback.
 function greet(user, callback) {
     console.log("Hello " + user)
@@ -372,11 +372,7 @@ const users = {
     return new Promise((resolve, reject) => {
   
       setTimeout(() => {
-  
-      
-  
-  
-        
+    
         if (users[userID]) {
   
           resolve(users[userID])
@@ -401,10 +397,7 @@ const users = {
           1: ["Dance", "Give up"],
           2: ["Cook", "Break fast"],
           3: ["Attend meeting"]
-  
         }
-  
-  
         
         if (users[userID] && tasks[userID])  {
   
@@ -414,7 +407,7 @@ const users = {
   
           reject(new Error("User with this task is not available in the database"))
         }
-  
+        
         
       }, 2000);
     })

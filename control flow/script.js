@@ -222,7 +222,7 @@ for(let i = 1; i<= 5; i++){
 
 let fruit = ["apple", "orange", "pineapple", "cucumber"];
 for(let i = 1; i< fruit.length; i++){
-    console.log(fruit[i] )
+    console.log(fruit[i])
 }
 
 let car = "abdullah";

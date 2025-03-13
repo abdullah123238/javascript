@@ -84,8 +84,11 @@ document.getElementById("textinput").addEventListener("keyup", function(event){
 })
 
 function greet(name){
-    alert("hello," + name + "!");
+    alert("hello," + `${name}` + "!");
 }
+
+console.log()
+
 
 document.getElementById("greetBtn").addEventListener("click", () => greet ("abdullah"))
 

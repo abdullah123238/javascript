@@ -106,13 +106,13 @@ const login=(username, password, isAdmin) => {
 
 console.log(login("user", "pass123", true))
 
-const registration = (surname, phoneNumber, password) => {
-    if (!surname || !phoneNumber) "Please fill the necessary information to proceed"
-    if(password) return "Uppercase required"
-    return surname === "abdullah" && phoneNumber === "09164129321" ? "This already exist!" : "User already registered!"
-}
+// const registration = (surname, phoneNumber, password) => {
+//     if (!surname || !phoneNumber) "Please fill the necessary information to proceed"
+//     if(password) return "Uppercase required"
+//     return surname === "abdullah" && phoneNumber === "09164129321" ? "This already exist!" : "User already registered!"
+// }
 
-console.log(registration("abdullah", "09164129321", false))
+// console.log(registration("abdullah", "09164129321", false))
 
 const registrations = (username, password, country, state, email) => {
     if (!username || !password) return "Please fill the required fields"
