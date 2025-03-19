@@ -241,7 +241,7 @@ const numbMap = arrNumb.map((i) =>  {
 console.log(numbMap)
 
 //13. Filter
-//It create and array that satify the condition.
+//It create an array that satify the condition.
 //Filter Method create a new array, it will create a clone array and then filter through it
 const evenNumber = arrNumb.filter((i) => i % 2 === 0)
 console.log(evenNumber)
