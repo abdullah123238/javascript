@@ -1,0 +1,10 @@
+{
+    "name": "Adeosun Abdullah",
+    "age": 12,
+    "hobbies": ["sleeping", "cooking"],
+    "address": {
+        "street": "ajaleikoko",
+        "Number": 2,
+        "city": "sango-ota"
+    }
+} 
